@@ -1,6 +1,7 @@
 import type { Component } from 'solid-js'
 import right from './assets/right.png'
 
+// i'll need to change the domain and get a new one
 const App: Component = () => {
   return (
     <div class='px-28 py-14'>
