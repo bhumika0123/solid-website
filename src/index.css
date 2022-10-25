@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,9 +10,60 @@
   box-sizing: border-box;
 }
 
+p,
+button,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.shade-over-main {
+  position: absolute;
+  width: 55px;
+  height: 600px;
+  left: 1000px;
+  top: -30px;
+  background: rgba(188, 188, 188, 0.29);
+  filter: blur(31px);
+  transform: rotate(63.03deg);
+}
+
+@keyframes main-in {
+  from {
+    bottom: -30px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.main-anim-in {
+  animation: 1s linear forwards main-in;
+}
+
+@keyframes main-side {
+  from {
+    left: 0;
+  }
+  to {
+    left: -10%;
+  }
+}
+
+.wtf-style {
+  animation: 1s ease-in forwards main-side;
 }
